@@ -1,0 +1,61 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<!-- Main Navigation ========================================================================================== -->
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$.ajax({
+			type : 'POST',
+			dataType:'json',
+			url : '${pageContext.request.contextPath}/user/followCount.do',
+			success : function(data) {
+				$("#following").text(data[0]);
+				$("#follower").text(data[1]);
+			}
+		});
+	});
+</script>
+
+<div class="navbar navbar-default navbar-fixed-top">
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse"
+				data-target=".navbar-responsive-collapse">
+				<span class="icon-bar"></span> <span class="icon-bar"></span> <span
+					class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="index.jsp">나무소셜</a>
+		</div>
+		<div class="navbar-collapse collapse navbar-responsive-collapse">
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="${pageContext.request.contextPath}/message/list.do">소셜 홈</a></li>
+				<li><a
+					href="${pageContext.request.contextPath}/user/followingList.do">팔로잉(<span id="following"></span>)</a></li>
+				<li><a
+					href="${pageContext.request.contextPath}/user/followerList.do">팔로워(<span id="follower"></span>)</a></li>
+				<li><a href="#">공지사항</a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="#">로그아웃</a></li>
+				<li class="dropdown"><a href="#" class="dropdown-toggle"
+					data-toggle="dropdown">관리 <b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="#">커뮤니티 관리센터</a></li>
+						<li><a href="#">클럽 관리센터</a></li>
+						<li><a href="#">팀 관리센터</a></li>
+						<li class="divider"></li>
+						<li><a href="#">홍보</a></li>
+					</ul></li>
+				<li class="dropdown"><a href="#" class="dropdown-toggle"
+					data-toggle="dropdown">설정 <b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="#">개인정보</a></li>
+						<li><a href="#">모바일 환경설정</a></li>
+					</ul></li>
+			</ul>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>나무소셜</title>
+    <link href="../../resources/css/bootstrap.css" rel="stylesheet">
+    <link href="../../resources/css/bootswatch.min.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Main Navigation ========================================================================================== -->
+<div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.jsp">나무소셜</a>
+        </div>
+        <div class="navbar-collapse collapse navbar-responsive-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">소셜 홈</a></li>
+                <li><a href="#">팔로잉(15)</a></li>
+                <li><a href="#">팔로워(10)</a></li>
+                <li><a href="#">공지사항</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">로그아웃</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">관리 <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">커뮤니티 관리센터</a></li>
+                        <li><a href="#">클럽 관리센터</a></li>
+                        <li><a href="#">팀 관리센터</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">홍보</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">설정 <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">개인정보</a></li>
+                        <li><a href="#">모바일 환경설정</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Header ========================================================================================== -->
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="jumbotron">
+                    <h1>나무 소셜과 함께!</h1>
+                    <p>오늘은 어땠나요? 나무 소셜과 함께 대화를 시작하세요.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Container ======================================================================================= -->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <!-- ★★★ Tab Menu -->
+            <ul class="nav nav-tabs" style="margin-bottom: 15px;">
+                <li class="active"><a href="#" data-toggle="tab">나의메시지</a></li>
+                <li><a href="#" data-toggle="tab">최신메시지</a></li>
+            </ul>
+
+
+            <!-- ★★★ Tab Panel -->
+            <div id="communityList" class="tab-content">
+                <!-- ★★★ 가입 커뮤니티 -->
+                <div class="tab-pane fade active in" id="joined">
+                    <div class="page-header">
+                        <h3 id="container">오늘의 상태 업데이트</h3>
+                        <form class="form-search">
+                            <div class="input-group">
+                        		<input type="text" class="form-control" placeholder="내용을 입력하세요">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-primary">등록</button>
+                                </span>
+                            </div>
+                        </form>
+                    </div>
+
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <span class="badge">2016-03-14</span>
+                            <h4><a href="#">jiwonpark</a></h4>
+                            <p>메시지 내용</p>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="badge">2016-03-14</span>
+                            <h4><a href="#">jiwonpark</a></h4>
+                            <p>메시지 내용</p>
+                        </li><li class="list-group-item">
+                            <span class="badge">2016-03-13</span>
+                            <h4><a href="#">jiwonpark</a></h4>
+                            <p>메시지 내용</p>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="badge">2016-03-13</span>
+                            <h4><a href="#">jiwonpark</a></h4>
+                            <p>메시지 내용</p>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="badge">2016-03-12</span>
+                            <h4><a href="#">jiwonpark</a></h4>
+                            <p>메시지 내용</p>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="badge">2016-03-11</span>
+                            <h4><a href="#">jiwonpark</a></h4>
+                            <p>메시지 내용</p>
+                        </li>
+                    </ul>
+
+                    <button type="button" class="btn btn-default btn-lg btn-block">메시지 목록 더보기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Footer ========================================================================================== -->
+    <footer>
+        <div class="row">
+            <div class="col-lg-12">
+                <ul class="list-unstyled">
+                    <li class="pull-right"><a href="#top">위로 이동</a></li>
+                    <li><a href="index.jsp">소셜 홈</a>
+                    </li>
+                    <li><a href="#">RSS</a></li>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#">도움말</a></li>
+                    <li><a href="#">회원탈퇴</a></li>
+                </ul>
+                <p>© NamooSori 2016.</p>
+            </div>
+        </div>
+    </footer>
+</div>
+
+</body>
+</html>
